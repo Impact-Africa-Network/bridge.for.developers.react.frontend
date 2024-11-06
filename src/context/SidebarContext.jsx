@@ -20,6 +20,17 @@ export const SidebarProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const toggleSidebar = () => setIsExpanded(!isExpanded);
+  const openLabelModal = () => setIsLabelModalOpen(true);
+  const closeLabelModal = () => setIsLabelModalOpen(false);
+  const addLabel = (label) => {
+    setLabels([...labels, label]);
+  };
+
+  const removeLabel = (labelId) => {
+    setLabels(labels.filter(label => label.id !== labelId));
+  };
+
   // Save notes to localStorage whenever they change
   useEffect(() => {
     saveToStorage(notes);
@@ -143,8 +154,13 @@ export const SidebarProvider = ({ children }) => {
     <SidebarContext.Provider value={{
       isExpanded,
       activeView,
+      toggleSidebar,
       setActiveView,
       isLabelModalOpen,
+      openLabelModal,
+      closeLabelModal,
+      addLabel,
+      removeLabel,
       labels,
       notes: filteredNotes,
       isLoading,
