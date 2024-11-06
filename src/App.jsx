@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import {Button} from './components/ui/button'
+import Homepage from './components/mainpage/Homepage'
 
 function App() {
 
   return (
     <>
-    <h2>Welcome to Bridge for Developers</h2>
-    <h3>Happy Coding</h3>
-    <Button>Click me</Button>
+     <Homepage />
     </>
   )
 }
