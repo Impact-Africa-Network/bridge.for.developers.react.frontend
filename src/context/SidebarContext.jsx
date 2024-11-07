@@ -3,10 +3,10 @@ import { createContext, useContext, useState, useEffect } from 'react';
 import { loadFromStorage, saveToStorage } from '../utils/localStorage';
 
 const MOCK_API = {
-  GET_NOTES: 'https://run.mocky.io/v3/0d6e36bb-6309-497d-a332-89d13aa88050',
-  GET_ARCHIVED: 'https://run.mocky.io/v3/your-archived-endpoint',
-  GET_TRASH: 'https://run.mocky.io/v3/your-trash-endpoint',
-  POST_NOTE: 'https://run.mocky.io/v3/8d3b248a-05f6-47dc-9f0e-4558fda8e8d5'
+  GET_NOTES: 'https://run.mocky.io/v3/ad64777a-cfd5-45dd-a22f-bd3da50d190a',
+  // GET_ARCHIVED: 'https://run.mocky.io/v3/your-archived-endpoint',
+  // GET_TRASH: 'https://run.mocky.io/v3/your-trash-endpoint',
+  POST_NOTE: 'https://run.mocky.io/v3/3e0ffe9e-c7ba-4ad1-a6aa-4b649dc240b1'
 };
 
 const SidebarContext = createContext();
